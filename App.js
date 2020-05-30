@@ -20,7 +20,8 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Modal visible={this.state.visible}>
+        {/* 广告 */}
+        {/* <Modal visible={this.state.visible}>
           <ViewPager style={{flex:1}} initialPage={0}>
             <View key="1">
               <Text>First page</Text>
@@ -30,7 +31,9 @@ export default class App extends Component {
               <Button title="关闭" onPress={this._hide}/>
             </View>
           </ViewPager>
-        </Modal>
+        </Modal> */}
+
+        {/*  */}
         <Drawer.Navigator>
           <Drawer.Screen name="Main" component={Main} />
           <Drawer.Screen name="Setting" component={Setting} />
