@@ -5,17 +5,22 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import ViewPager from '@react-native-community/viewpager';
+import Home from './Home'
+import List from './List'
+import About from './About'
+import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
+// import Ionicons from 'react-native-vector-icons/Ionicons';
 const Drawer = createDrawerNavigator()
 const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator()
 export default class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state={visible:true}
+    this.state = { visible: true }
   }
-  _hide=()=>{
-    this.setState({visible:false})
+  _hide = () => {
+    this.setState({ visible: false })
   }
   render() {
     return (
@@ -32,72 +37,56 @@ export default class App extends Component {
             </View>
           </ViewPager>
         </Modal> */}
+        <Tab.Navigator
+          screenOptions={({ route }) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+              
+              if (route.name === 'Home') {
+                iconName = focused
+                  ? 'home'
+                  : 'home';
+              } else if (route.name === 'List') {
+                iconName = focused ? 'list' : 'list';
+              }else if (route.name === 'About') {
+                iconName = focused ? 'user' : 'user';
+              }
 
-        {/*  */}
-        <Drawer.Navigator>
-          <Drawer.Screen name="Main" component={Main} />
-          <Drawer.Screen name="Setting" component={Setting} />
-        </Drawer.Navigator>
+              // You can return any component that you like here!
+              return <SimpleLineIcons name={iconName} size={20} color={color} />;
+            },
+          })}
+          tabBarOptions={{
+            activeTintColor: 'tomato',
+            inactiveTintColor: 'gray',
+          }}
+
+        >
+          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen name="List" component={List} />
+          <Tab.Screen name="About" component={About} />
+        </Tab.Navigator>
       </NavigationContainer>
     )
   }
 }
 
-class Main extends React.Component {
+// class Main extends React.Component {
 
-  render() {
-    return <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Buy" component={Buy} />
-      <Tab.Screen name="FAQ" component={Faq} />
-    </Tab.Navigator>
-  }
-}
+//   render() {
+//     return <Tab.Navigator>
+//       <Tab.Screen name="Home" component={Home} />
+//       <Tab.Screen name="Buy" component={Buy} />
+//       <Tab.Screen name="FAQ" component={Faq} />
+//     </Tab.Navigator>
+//   }
+// }
 
-class Setting extends React.Component {
+// class Setting extends React.Component {
+//   render() {
+//     return <Text>Setting</Text>
+//   }
+// }
 
-  render() {
-    return <Text>Setting</Text>
-  }
-}
 
-class Home extends React.Component {
 
-  render() {
-    return <Text>Main</Text>
-  }
-}
-class Buy extends React.Component {
-
-  render() {
-    return <Stack.Navigator>
-      <Stack.Screen name="ItemList" component={ItemList} />
-      <Stack.Screen name="ItemDetail" component={ItemDetail} />
-    </Stack.Navigator>
-  }
-}
-class Faq extends React.Component {
-
-  render() {
-    return <Text>Faq</Text>
-  }
-}
-
-class ItemList extends React.Component {
-  _showDetail = () => {
-    this.props.navigation.navigate("ItemDetail")
-  }
-  render() {
-    return <View>
-      <Text>ItemList</Text>
-      <Button title="查看详情" onPress={this._showDetail} />
-    </View>
-  }
-}
-
-class ItemDetail extends React.Component {
-
-  render() {
-    return <Text>ItemDetail</Text>
-  }
-}
