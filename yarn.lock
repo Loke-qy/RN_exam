@@ -991,6 +991,11 @@
   resolved "https://registry.npm.taobao.org/@react-native-community/masked-view/download/@react-native-community/masked-view-0.1.10.tgz#5dda643e19e587793bc2034dd9bf7398ad43d401"
   integrity sha1-XdpkPhnlh3k7wgNN2b9zmK1D1AE=
 
+"@react-native-community/slider@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/@react-native-community/slider/download/@react-native-community/slider-3.0.0.tgz#ffbf78689fc0572fb5c1e2ccb61b2ef074d3dcd2"
+  integrity sha1-/794aJ/AVy+1weLMthsu8HTT3NI=
+
 "@react-native-community/viewpager@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npm.taobao.org/@react-native-community/viewpager/download/@react-native-community/viewpager-4.0.0.tgz#bae6fc2d0689c85488a1f413ecf19e39b3b7e1d9"
@@ -5131,7 +5136,7 @@ react-native-vector-icons@^6.6.0:
 
 react-native-video@^4.4.5:
   version "4.4.5"
-  resolved "https://registry.npm.taobao.org/react-native-video/download/react-native-video-4.4.5.tgz?cache=0&sync_timestamp=1583977503312&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-native-video%2Fdownload%2Freact-native-video-4.4.5.tgz#d0db799293f8622c7894dd0f8875cb41bfafbde8"
+  resolved "https://registry.npm.taobao.org/react-native-video/download/react-native-video-4.4.5.tgz#d0db799293f8622c7894dd0f8875cb41bfafbde8"
   integrity sha1-0Nt5kpP4Yix4lN0PiHXLQb+vveg=
   dependencies:
     keymirror "^0.1.1"
