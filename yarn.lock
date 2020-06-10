@@ -5131,7 +5131,7 @@ react-native-vector-icons@^6.6.0:
 
 react-native-video@^4.4.5:
   version "4.4.5"
-  resolved "https://registry.npm.taobao.org/react-native-video/download/react-native-video-4.4.5.tgz#d0db799293f8622c7894dd0f8875cb41bfafbde8"
+  resolved "https://registry.npm.taobao.org/react-native-video/download/react-native-video-4.4.5.tgz?cache=0&sync_timestamp=1583977503312&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-native-video%2Fdownload%2Freact-native-video-4.4.5.tgz#d0db799293f8622c7894dd0f8875cb41bfafbde8"
   integrity sha1-0Nt5kpP4Yix4lN0PiHXLQb+vveg=
   dependencies:
     keymirror "^0.1.1"
